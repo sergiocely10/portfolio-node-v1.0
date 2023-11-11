@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Sergio Cely | developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--
+        header: Nombre, foto, proyectos, contacto
+        body: introducción, presentación, proyectos, fórmulario contacto
+        footer: redes sociales, hecho por
+    -->
+    <div class="wrap">
+        <header class="header">
+            <div class="header_img_profile">
+                <a class="logo" href="#">
+                    <picture>
+                        <source type="image/wepb" srcset="assets/img/img-profile.wepb">
+                        <source type="image/jpg" srcset="assets/img/img-profile.jpg">
+                        <img width="130"  srcset="assets/img/img-profile.wepb" alt="Profile picture">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="header_menu">
+                <a class="logo" href="#">
+                    <span class="logo_text">
+                        Sergio Cely
+                    </span>
+                </a>
+                <nav class="menu">
+                    <a class="menu_item menu_item_project" href="#">Projects</a>
+                    <a class="menu_item menu_item_contact" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- intro -->
+        <section class="intro">
+            <div class="intro_box">
+                <h3>Hi, I'm Sergio 👋</h3>
+                <article class="intro_description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel vitae saepe! A quas assumenda modi. Qui iure, autem eaque sequi alias, suscipit in impedit neque dolores facere, libero quibusdam.
+                </article>
+                <p class="intro_findme">
+                    I'm on <a href="https://github.com/sergiocely10" target="_blank">GitHub</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- proyectos -->
+        <section class="projects">
+            <div class="projects_box">
+                <h3>Projects</h3>
+                <article class="projects_description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel vitae saepe! A quas assumenda modi. Qui iure, autem eaque sequi alias, suscipit in impedit neque dolores facere, libero quibusdam.
+                </article>
+
+                <div id="slider" class="slider">
+                    <div class="project_content">
+                        <div id="content" class="content">
+                            <div class="card">
+                                <div class="card_content">
+                                    <div class="card_image">
+                                        <img src="assets/img/bachillerato.png" alt="" srcset="">
+                                    </div>
+                                    <div class="card_description">
+                                        <span class="title">Project #1</span>
+                                        <span class="description">This is an example of a description for a project</span>
+                                    </div>
+                                    <div class="button">
+                                        <button class="viewmore"> View more </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card_content">
+                                    <div class="card_image">
+                                        <img src="assets/img/chekar.png" alt="" srcset="">
+                                    </div>
+                                    <div class="card_description">
+                                        <span class="title">Project #2</span>
+                                        <span class="description">This is an example of a description for a project</span>
+                                    </div>
+                                    <div class="button">
+                                        <button class="viewmore"> View more </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card_content">
+                                    <div class="card_image">
+                                        <img src="assets/img/galapp.png" alt="" srcset="">
+                                    </div>
+                                    <div class="card_description">
+                                        <span class="title">Project #3</span>
+                                        <span class="description">This is an example of a description for a project</span>
+                                    </div>
+                                    <div class="button">
+                                        <button class="viewmore"> View more </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card_content">
+                                    <div class="card_image">
+                                        <img src="assets/img/kidemy.png" alt="" srcset="">
+                                    </div>
+                                    <div class="card_description">
+                                        <span class="title">Project #4</span>
+                                        <span class="description">This is an example of a description for a project</span>
+                                    </div>
+                                    <div class="button">
+                                        <button class="viewmore"> View more </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card_content">
+                                    <div class="card_image">
+                                        <img src="assets/img/kidemy-flyer.png" alt="" srcset="">
+                                    </div>
+                                    <div class="card_description">
+                                        <span class="title">Project #5</span>
+                                        <span class="description">This is an example of a description for a project</span>
+                                    </div>
+                                    <div class="button">
+                                        <button class="viewmore"> View more </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div id="slides" class="slides">
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                            </div>
+                          </div>
+                        <div class="controls">
+                            <div class="control_arrow">
+                                <a id="prev" class="control prev">
+                                    <svg class="arrows" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                                </a>
+                                <a id="next" class="control next">
+                                    <svg class="arrows" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>      
+
+        <!-- contacto -->
+        <section class="contact">
+            <div class="contact_box">
+                <h3>Contact</h3>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel vitae saepe! A quas assumenda modi. Qui iure, autem eaque sequi alias, suscipit in impedit neque dolores facere, libero quibusdam.
+                </article>
+                <form action="">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <button onclick="myFunction()">Try it</button>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_inner">
+                <p>
+                    © 2023 Sergio Cely
+                </p>
+            </div>
+        </footer>
+    
+    </div>
+
+    <script src="js/carusel.js"></script>
+    <script src="js/carusel-2.js"></script>
+</body>
+</html>

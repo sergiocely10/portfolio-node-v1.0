@@ -1,0 +1,330 @@
+/*
+display: flex -- flexbox
+modelo de caja -- box alignment // en tamaño suma tamaño + margin + padding, el box-sizing ayuda a controlar esto
+gap
+
+https://sebkay.com/
+https://medium.com/@claudiaconceic/infinite-plain-javascript-slider-click-and-touch-events-540c8bd174f2
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* averiguar sobre box-sizing */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0e8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* wrap div basic attributes */
+.wrap{
+    width: 100%;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 80px 30px 30px 30px;
+}
+
+
+/* HEADER */
+.header {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 60px;
+}
+
+.header_img_profile img {
+    border-radius: 50%;
+}
+
+.header_menu {
+    width: 100%;
+    align-self: center;
+}
+
+.header_menu a {
+    text-decoration: none;
+}
+
+.header_menu .logo {
+    display: inline-flex;
+}
+
+.logo_text {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: #191a1d;
+    font-weight: bold;
+
+}
+
+.logo_text::after {
+    max-width: 30%;
+    margin-top: 7%;
+    height: 6px;
+    display: block;
+    content: "";
+    border-radius: 1000px;
+    background: #232939;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+
+.menu_item {
+    margin-top: 1.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #191a1d;
+}
+
+.menu_item_project:hover{
+    color: #CE8D66;
+}
+
+.menu_item_contact:hover{
+    color: #038d51;
+}
+    
+/* HEADER END */
+
+/* INTRO */
+.intro {
+    margin-bottom: 40px;
+}
+
+.intro_box {
+    padding: 40px;
+    background-color: #232939;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+.intro_box h3 {
+    font-size: 3rem;
+}
+
+.intro_description {
+    font-size: 1.3rem;
+    margin-top: 1.5%;
+}
+
+.intro_findme {
+    font-size: 1.2rem;
+    margin-top: 2.5%;
+}
+
+.intro_findme a {
+    text-decoration: none;
+    color: #6b9080;
+}
+
+/* INTRO END */
+
+/* PROJECTS */
+.projects {
+    margin-bottom: 40px;
+}
+
+.projects_box {
+    padding: 40px;
+    background-color: #CE8D66;
+    border-radius: 20px;
+}
+
+.projects_box h3{
+    font-size: 2.2rem;
+    color: #232939;
+}
+
+.projects_description {
+    font-size: 1.2rem;
+    color: #191a1d;
+}
+
+.project_content {
+    display: flex;
+    gap: 1%;
+    margin-top: 2.5%;
+    position: relative;
+    overflow: hidden;
+    justify-content: center; 
+    z-index: 1;   
+}
+
+.content {
+    display: flex;
+    gap: 3%;
+}
+
+div .card .card_image {
+    width: 160px;
+    border-radius: 10%;
+    padding: 3px;
+    background: #232939;   
+}
+
+div .card .card_image img{
+    height: 100%;
+    width: 100%;   
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid #EDE3E9;  
+}
+
+.card {
+    display: flex;
+    position: relative;
+    background: #232939;
+    border-radius: 20px;
+    width: 230px;
+}
+
+.card::before{
+    content: ""; 
+    position: absolute;
+    height: 50%;  
+    width: 100%;
+    background: #EDE3E9;
+    border-radius: 20px 20px 0 0;
+
+}
+
+.card .card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.card .card_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    color: #EDE3E9;
+}
+
+.card_description .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.card_description .description {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card .button button {
+    margin-top: 5px;
+    background: #EDE3E9;
+    outline: none;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 10px;
+}
+
+.button button:hover{
+    background: #6b9080;
+    cursor: pointer;
+}
+
+.viewmore:hover{
+    color: white;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev:active, .next:active {
+transform: scale( .8)
+}
+
+.control_arrow {
+    display: flex;
+    align-items: center;
+}
+
+.arrows {
+    margin: 20%;
+    display: block;
+}
+
+
+/* PROJECTS END */
+
+/* CONTACT */
+
+.contact {
+
+    margin-bottom: 40px;
+}
+
+.contact_box {
+    padding: 40px;
+    background-color: #6b9080;
+    border-radius: 20px;
+    color:#f0f0e8;
+
+}
+
+/* CONTACT END */
+
+/* FOOTER */
+
+.footer::before {
+    max-width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    height: 3px;
+    display: block;
+    content: "";
+    border-radius: 1000px;
+    background: #232939;
+}
+
+.footer_inner {
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+    .menu_item, .intro_description, .intro_findme, .content{
+        margin-top: 4.5%;
+    }
+
+} 
