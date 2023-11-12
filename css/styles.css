@@ -154,7 +154,7 @@ body {
 
 .project_content {
     display: flex;
-    gap: 1%;
+    gap: 0.5%;
     margin-top: 2.5%;
     position: relative;
     overflow: hidden;
@@ -327,4 +327,12 @@ transform: scale( .8)
         margin-top: 4.5%;
     }
 
-} 
+}
+/*
+@media (max-width: 850px ) {
+    .content {
+        display: none;
+    }
+
+
+}*/

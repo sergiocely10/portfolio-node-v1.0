@@ -8,8 +8,13 @@ function myFunction() {
 }
 */
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
+    window.onresize = showSlides;
     let slideIndex = 1;
+    var slide_3 = window.matchMedia("(min-width: 900px)");
+    var slide_2 = window.matchMedia("(min-width: 670px) and (max-width: 899px)");
 
     showSlides(slideIndex);
 
@@ -25,21 +30,60 @@ document.addEventListener("DOMContentLoaded", function () {
         let i;
         const slides = document.getElementsByClassName("card");
 
-        if (n > slides.length - 2) {
-            slideIndex = 1;
+        if(slide_3.matches){
+
+            if (n > slides.length - 2) {
+                slideIndex = 1;
+            }
+    
+            if (n < 1) {
+                slideIndex = slides.length - 2;
+            }
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex].style.display = "block";
+            slides[slideIndex + 1].style.display = "block";
+
+        } else if (slide_2.matches) {
+
+            if (n > slides.length - 1) {
+                slideIndex = 1;
+            }
+    
+            if (n < 1) {
+                slideIndex = slides.length - 1;
+            }
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex].style.display = "block";
+            slides[slideIndex + 1].style.display = "none";
+
+        } else {
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+    
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex].style.display = "none";
+            slides[slideIndex + 1].style.display = "none";
         }
 
-        if (n < 1) {
-            slideIndex = slides.length - 2;
-        }
-
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-        slides[slideIndex].style.display = "block";
-        slides[slideIndex + 1].style.display = "block";
     }
 
     // Llamar a las funciones al hacer clic en los botones
