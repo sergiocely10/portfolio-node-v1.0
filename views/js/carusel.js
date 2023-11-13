@@ -1,20 +1,8 @@
-/*
-
-var items = document.getElementsByClassName("card");
-var total_items = items.length;
-
-function myFunction() {
-    alert(total_items);
-}
-*/
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     window.onresize = showSlides;
     let slideIndex = 1;
-    var slide_3 = window.matchMedia("(min-width: 900px)");
-    var slide_2 = window.matchMedia("(min-width: 670px) and (max-width: 899px)");
+    var slide_3 = globalThis.matchMedia("(min-width: 900px)");
+    var slide_2 = globalThis.matchMedia("(min-width: 670px) and (max-width: 899px)");
 
     showSlides(slideIndex);
 
