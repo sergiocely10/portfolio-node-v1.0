@@ -9,7 +9,7 @@ const multiparty = require("multiparty");
 const path = require("path");
 const bodyParser = require('body-parser');
 require("dotenv").config();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 8080;
 
 
 // instantiate an express app
