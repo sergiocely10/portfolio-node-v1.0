@@ -11,6 +11,15 @@ const sendMail = (mail) => {
     method: "post",
     body: mail,
   }).then((response) => {
-    return response.json();
+    if (response.status === 200) {
+      Swal.fire({
+        title: "Message Delivered!",
+        text: "Your message was sent successfully",
+        icon: "success"
+      })
+    } else {
+      Swal.fire("Message Not Delivered!")
+    }
+    //return response.json();
   });
 };
